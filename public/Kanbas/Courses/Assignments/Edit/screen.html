@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment Editor</title>
+</head>
+<body>
+<table width = "100%">
+    <td width = "15%" valign="top">
+        <!--Kanbas Navigation-->
+        <ul>
+            <li><a href="../../../Account/Profile/screen.html">Account</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Inbox</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Studio</a></li>
+            <li><a href="#">Commons</a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+    </td>
+    <td width = "15%" valign="top">
+        <!--Course Navigation-->
+        <ul>
+            <li><a href="../Home/screen.html">Home</a></li>
+            <li><a href="#">Modules</a></li>
+            <li><a href="#">Piazza</a></li>
+            <li><a href="#">Zoom Meetings</a></li>
+            <li><a href="../../Assignments/screen.html">Assignments</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="../Grades/screen.html">Grades</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Panopto Video</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Rubrics</a></li>
+            <li><a href="#">Outcomes</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </td>
+    <td width = "70%" valign="top">
+        <label>
+            <select>
+                <option>SpeedGrader</option>
+            </select>
+        </label><br>
+        <h3>Assignment Name</h3>
+        <label for="wd-assignment-name"></label>
+        <input value="A1 ENV + HTML" id="wd-assignment-name" /><br>
+        <br>
+        <label>
+<textarea>
+    This is the assignment description.
+</textarea>
+        </label>
+        <br>
+        <br>
+        Points<br>
+        <input type="number" value="100" min="0" max="100" /><br>
+        <br>
+        Assignment Group<br>
+        <label>
+            <select>
+                <option>ASSIGNMENTS</option>
+                <option>Group 2</option>
+                <option>Group 3</option>
+            </select>
+        </label><br>
+        <br>
+        Display Grade as<br>
+        <label>
+            <select>
+                <option>Percentage</option>
+            </select>
+        </label><br>
+        <br>
+        Submission Type<br>
+        <label>
+            <select>
+                <option>Online</option>
+            </select>
+        </label><br>
+        <br>
+        Submission Attempts<br>
+        <label>
+            <select>
+                <option>Limited</option>
+                <option>Unlimited</option>
+            </select>
+        </label><br>
+        <br>
+        Plagiarism Review<br>
+        <label>
+            <select>
+                <option>Enable Plagiarism Review</option>
+            </select>
+        </label><br>
+        <br>
+        <label>Online Entry Options</label><br />
+        <input type="checkbox" name="wd-entry-options" id="wd-text-entry" />
+        <label for="wd-text-entry">Text Entry</label><br />
+        <input type="checkbox" name="wd-entry-options" id="wd-website-url" />
+        <label for="wd-website-url">Website URL</label><br />
+        <input
+                type="checkbox"
+                name="wd-entry-options"
+                id="wd-media-recordings"
+        />
+        <label for="wd-media-recordings">Media Recordings</label><br />
+        <input
+                type="checkbox"
+                name="wd-entry-options"
+                id="wd-student-annotations"
+        />
+        <label for="wd-student-annotations">Student Annotations</label><br />
+        <input type="checkbox" name="wd-entry-options" id="wd-file-uploads" />
+        <label for="wd-file-uploads">File Uploads</label><br />
+        <br>
+        <label>Group Assignments:</label><br>
+        <input type="radio" id="solo" name="group_size" value="solo">
+        <label for="solo">Individual Student</label><br>
+
+        <input type="radio" id="pair" name="group_size" value="pair">
+        <label for="pair">2 Students</label><br>
+
+        <input type="radio" id="trio" name="group_size" value="trio">
+        <label for="trio">3 Students</label><br>
+        <br>
+        <label>Peer Reviews:</label><br>
+        <input type="radio" id="mandatory_review" name="peer_review_requirement" value="mandatory">
+        <label for="mandatory_review">Mandatory</label><br>
+
+        <input type="radio" id="optional_review" name="peer_review_requirement" value="optional">
+        <label for="optional_review">Optional</label><br>
+        <br>
+        Assign<br>
+        Assign to<br>
+        <label>
+            <input type="text" value="Everyone"/>
+        </label><br>
+        <br>
+        Due<br />
+        <input name="wd-due-date" type="date" value="2021-01-01" /><br>
+        <br>
+        Available From<br>
+        <input name="wd-available-from" type="date" value="2021-01-01" /><br>
+        <br>
+        Until<br>
+        <input name="wd-available-until" type="date" value="2021-01-01" /><br>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <form action="../screen.html">
+                        <button type="submit">Save</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="../screen.html">
+                        <button type="submit">Cancel</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </td>
+</table>
+</body>
+</html>

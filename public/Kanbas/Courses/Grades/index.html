@@ -1,27 +1,50 @@
 <html lang="">
 <head>
     <title></title>
+</head>
 <body>
-<table border="1" width = "100%">
+<table width = "50%">
     <tbody>
-    <tr>
-        <!--                        copy and paste the corresponding contents into the table-->
-        <td valign = "top">
-            <select>
-                <option>Gradebook</option>
-                <option>Change Gradebook View</option>
-                <option>Traditional Gradebook View</option>
-                <option>Individual Gradebook</option>
-            </select>
-        </td>
-        <td valign = "top">Course Navigation</td>
-        <td valign = "top">Modules</td>
-        <td valign = "top">Course Status</td>
-    </tr>
+        <tr>
+            <td valign = "top">
+                <label>
+                    <select>
+                        <option>Gradebook</option>
+                        <option>Change Gradebook View</option>
+                        <option>Traditional Gradebook View</option>
+                        <option>Individual Gradebook</option>
+                    </select>
+                </label>
+            </td>
+            <td valign = "top">
+                <button>Import</button>
+            </td>
+            <td valign = "top">
+                <label>
+                    <select>
+                        <option>Export</option>
+                        <option>Export Current Gradebook View</option>
+                        <option>Export Entire Gradebook</option></select>
+                </label>
+            </td>
+            <td valign = "top">
+                <button>Configure</button>
+            </td>
+        </tr>
     </tbody>
 </table>
-<button>Apply Filter</button>
-<table border="1" width="100%">
+<h3>Student Names</h3>
+<label>
+    <input placeholder="Search Students" />
+</label>
+<h3>Assignment Names</h3>
+<label>
+    <input placeholder="Search Assignment" /><br>
+</label>
+<br>
+<button>Apply Filter</button><br>
+<br>
+<table border = "1" width="100%">
     <thead>
         <tr>
             <th rowspan="2">Student Name</th>
@@ -49,7 +72,7 @@
     </thead>
     <tbody>
     <tr>
-        <td>Alice Bob</td>
+        <td>Alice A</td>
         <td>
             <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
         </td>
@@ -78,12 +101,145 @@
             <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
         </td>
     </tr>
+    <tr>
+        <td>Bob B</td>
+        <td>
+            <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+        </td>
+        <td>
+            <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+        </td>
+        <td>
+            <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+        </td>
+        <td>
+            <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+        </td>
+        <td>
+            <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+        </td>
+        <td>
+            <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+        </td>
+        <td>
+            <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+        </td>
+        <td>
+            <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+        </td>
+        <td>
+            <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+        </td>
+    </tr>
+    <tr>
+        <td>Charlie C</td>
+        <td>100</td>
+        <td><input value="100" type="number" max="100" min="0" /></td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td>100</td>
+        <td><input value="100" type="number" max="100" min="0" /></td>
+    </tr>
+    <tr>
+        <td>Dylan D</td>
+        <td>100</td>
+        <td><input value="80" type="number" max="100" min="0" /></td>
+        <td>5</td>
+        <td>30</td>
+        <td>80</td>
+        <td><input value="90" type="number" max="100" min="0" /></td>
+        <td>10</td>
+        <td>100</td>
+        <td><input value="100" type="number" max="100" min="0" /></td>
+    </tr>
+    <tr>
+        <td>Erika E</td>
+        <td>100</td>
+        <td>100</td>
+        <td><input value="99" type="number" max="100" min="0" /></td>
+        <td>99</td>
+        <td>100</td>
+        <td><input value="100" type="number" max="100" min="0" /></td>
+        <td>19</td>
+        <td>100</td>
+        <td><input value="100" type="number" max="100" min="0" /></td>
+    </tr>
+    <tr>
+        <td>Francis F</td>
+        <td>100</td>
+        <td><input value="99" type="number" max="100" min="0" /></td>
+        <td>70</td>
+        <td>99</td>
+        <td>12</td>
+        <td>99</td>
+        <td>19</td>
+        <td><input value="99" type="number" max="100" min="0" /></td>
+        <td>87</td>
+    </tr>
+    <tr>
+        <td>Greta G</td>
+        <td>90</td>
+        <td>100</td>
+        <td><input value="89" type="number" max="100" min="0" /></td>
+        <td>99</td>
+        <td>100</td>
+        <td>99</td>
+        <td>89</td>
+        <td>80</td>
+        <td><input value="100" type="number" max="100" min="0" /></td>
+    </tr>
+    <tr>
+        <td>Haoran H</td>
+        <td>100</td>
+        <td>10</td>
+        <td>100</td>
+        <td><input value="100" type="number" max="100" min="0" /></td>
+        <td><input value="80" type="number" max="100" min="0" /></td>
+        <td>5</td>
+        <td>30</td>
+        <td>80</td>
+        <td><input value="90" type="number" max="100" min="0" /></td>
+    </tr>
+    <tr>
+        <td>Ivan I</td>
+        <td>100</td>
+        <td>100</td>
+        <td><input value="99" type="number" max="100" min="0" /></td>
+        <td>99</td>
+        <td>100</td>
+        <td><input value="80" type="number" max="100" min="0" /></td>
+        <td>19</td>
+        <td>100</td>
+        <td><input value="100" type="number" max="100" min="0" /></td>
+    </tr>
+    <tr>
+        <td>Jiaran J</td>
+        <td>100</td>
+        <td><input value="99" type="number" max="100" min="0" /></td>
+        <td>70</td>
+        <td><input value="99" type="number" max="100" min="0" /></td>
+        <td>12</td>
+        <td>99</td>
+        <td>19</td>
+        <td><input value="99" type="number" max="100" min="0" /></td>
+        <td>87</td>
+    </tr>
+    <tr>
+        <td>Karol K</td>
+        <td>90</td>
+        <td>100</td>
+        <td><input value="99" type="number" max="100" min="0" /></td>
+        <td>99</td>
+        <td>100</td>
+        <td>99</td>
+        <td>89</td>
+        <td>80</td>
+        <td><input value="100" type="number" max="100" min="0" /></td>
+    </tr>
     </tbody>
 </table>
-
-
-
-
 </body>
-</head>
 </html>
