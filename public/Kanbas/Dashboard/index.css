@@ -1,64 +1,44 @@
-.course-card {
+.wd-kanbas-dashboard .course-card {
     width: 250px;
     margin: 15px
 }
-.course-img {
+.wd-kanbas-dashboard .course-img {
     height: 150px;
     object-fit: cover; /* Maintain aspect ratio */
     width: 100%;
 }
-.active-link {
+.wd-kanbas-dashboard .active-link {
     background-color: white;
     color: red;
 }
 
-body, html {
+.wd-kanbas-dashboard body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow-x: hidden;
 }
 
-.main-content {
+.wd-kanbas-dashboard .main-content {
     margin-left: 120px;
     margin-right: 10px;
 }
 
-div.col{
+.wd-kanbas-dashboard div.col{
     max-width: 290px;
 }
 
 
-.no-padding {
-    margin:0;
-    padding-left: 0 !important;
-    max-width: 90px !important;
-    height:100%;
-}
-
-.sidebar {
-    position: fixed; /* Fixed position relative to the viewport */
-    top: 0;
-    left: 0;
-    right:0;
-    width: 90px; /* Sidebar width */
-    padding-left: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    flex-grow: 1;
-}
-
-
-.gx-4 {
+.wd-kanbas-dashboard .gx-4 {
     --bs-gutter-x: 40px;
 }
 
-.gy-4 {
+.wd-kanbas-dashboard .gy-4 {
     --bs-gutter-y: 40px;
 }
 
 
-@media (max-width: 500px) {
+.wd-kanbas-dashboard @media (max-width: 500px) {
     .sidebar {
         display: none; /* Hide sidebar on small screens */
         width:0;
