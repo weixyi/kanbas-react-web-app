@@ -2,172 +2,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Assignment Editor</title>
+    <title>Assignments Editor </title>
+    <link rel="stylesheet" href="/public/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/public/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/public/Kanbas/Courses/Home/Modules/index.css" />
+    <link rel="stylesheet" href="/public/Kanbas/Courses/Home/Status/index.css" />
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../../libs/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../../../libs/bootstrap/bootstrap.min.css" />
 </head>
+
 <body>
-<table width = "100%">
-    <td width = "15%" valign="top">
-        <!--Kanbas Navigation-->
-        <ul>
-            <li><a href="../../../Account/Profile/screen.html">Account</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Inbox</a></li>
-            <li><a href="#">History</a></li>
-            <li><a href="#">Studio</a></li>
-            <li><a href="#">Commons</a></li>
-            <li><a href="#">Help</a></li>
-        </ul>
-    </td>
-    <td width = "15%" valign="top">
-        <!--Course Navigation-->
-        <ul>
-            <li><a href="../../Home/screen.html">Home</a></li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Piazza</a></li>
-            <li><a href="#">Zoom Meetings</a></li>
-            <li><a href="../../Assignments/screen.html">Assignments</a></li>
-            <li><a href="#">Quizzes</a></li>
-            <li><a href="../../Grades/screen.html">Grades</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Panopto Video</a></li>
-            <li><a href="#">Discussions</a></li>
-            <li><a href="#">Announcements</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Rubrics</a></li>
-            <li><a href="#">Outcomes</a></li>
-            <li><a href="#">Collaborations</a></li>
-            <li><a href="#">Syllabus</a></li>
-            <li><a href="../../Settings/Home/screen.html">Settings</a></li>
-        </ul>
-    </td>
-    <td width = "70%" valign="top">
-        <label>
-            <select>
-                <option>SpeedGrader</option>
-            </select>
-        </label><br>
-        <h3>Assignment Name</h3>
-        <label for="wd-assignment-name"></label>
-        <input value="A1 ENV + HTML" id="wd-assignment-name" /><br>
-        <br>
-        <label>
-<textarea>
-    This is the assignment description.
-</textarea>
-        </label>
-        <br>
-        <br>
-        Points<br>
-        <input type="number" value="100" min="0" max="100" /><br>
-        <br>
-        Assignment Group<br>
-        <label>
-            <select>
-                <option>ASSIGNMENTS</option>
-                <option>Group 2</option>
-                <option>Group 3</option>
-            </select>
-        </label><br>
-        <br>
-        Display Grade as<br>
-        <label>
-            <select>
-                <option>Percentage</option>
-            </select>
-        </label><br>
-        <br>
-        Submission Type<br>
-        <label>
-            <select>
-                <option>Online</option>
-            </select>
-        </label><br>
-        <br>
-        Submission Attempts<br>
-        <label>
-            <select>
-                <option>Limited</option>
-                <option>Unlimited</option>
-            </select>
-        </label><br>
-        <br>
-        Plagiarism Review<br>
-        <label>
-            <select>
-                <option>Enable Plagiarism Review</option>
-            </select>
-        </label><br>
-        <br>
-        <label>Online Entry Options</label><br />
-        <input type="checkbox" name="wd-entry-options" id="wd-text-entry" />
-        <label for="wd-text-entry">Text Entry</label><br />
-        <input type="checkbox" name="wd-entry-options" id="wd-website-url" />
-        <label for="wd-website-url">Website URL</label><br />
-        <input
-                type="checkbox"
-                name="wd-entry-options"
-                id="wd-media-recordings"
-        />
-        <label for="wd-media-recordings">Media Recordings</label><br />
-        <input
-                type="checkbox"
-                name="wd-entry-options"
-                id="wd-student-annotations"
-        />
-        <label for="wd-student-annotations">Student Annotations</label><br />
-        <input type="checkbox" name="wd-entry-options" id="wd-file-uploads" />
-        <label for="wd-file-uploads">File Uploads</label><br />
-        <br>
-        <label>Group Assignments:</label><br>
-        <input type="radio" id="solo" name="group_size" value="solo">
-        <label for="solo">Individual Student</label><br>
 
-        <input type="radio" id="pair" name="group_size" value="pair">
-        <label for="pair">2 Students</label><br>
+<div class="wd-courses-assignments">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- First sidebar starts at the top of the page -->
+            <nav class="col-1 position-sticky no-padding sidebar">
+                <ul class="wd-kanbas-navigation sidebar no-padding">
+                    <li><a href="http://northeastern.edu"><i class="fa"></i> N</a></li>
+                    <li><a href="/public/Kanbas/Account/Navigation/index.html"><i class="fa fa-user icon-white"></i> Account</a></li>
+                    <li><a href="../../../Dashboard/screen.html"><i class="fa fa-tachometer"></i> Dashboard</a>
+                    </li>
+                    <li class="wd-active"><a href="/public/Kanbas/Courses/Home/screen.html"><i class="fa fa-book "></i> Courses</a></li>
+                    <li><a href="#"><i class="fa fa-calendar "></i> Calendar</a></li>
+                    <li><a href="#"><i class="fa fa-envelope "></i> Inbox</a></li>
+                    <li><a href="#"><i class="fa fa-history "></i> History</a></li>
+                    <li><a href="#"><i class="fa fa-medium "></i> Studio</a></li>
+                    <li><a href="#"><i class="fa fa-arrow-circle-right"></i> Commons</a></li>
+                    <li><a href="#"><i class="fa fa-question-circle "></i> Help</a></li>
+                </ul>
+            </nav>
+            <!-- Offset for the first sidebar -->
+            <!-- Breadcrumb row -->
+            <div class="col-11">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">CS5610.11744.202310  >  Assignments</li>
+                        <li class="breadcrumb-item active" aria-current="page">A1 - ENV</li>
+                    </ol>
+                </nav>
+                <div class="row">
+                    <!-- Content after breadcrumb -->
+                    <nav class="col-2 position-sticky courses-sidebar">
+                        <ul class="wd-courses-navigation courses-sidebar">
+                            <li><a href="../../Home/screen.html">Home</a></li>
+                            <li><a href="#">Modules</a></li>
+                            <li><a href="#">Piazza</a></li>
+                            <li><a href="#">Zoom Meetings</a></li>
+                            <li class="wd-active"><a href="../screen.html">Assignments</a></li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li><a href="../../Grades/screen.html">Grades</a></li>
+                            <li><a href="#">People</a></li>
+                            <li><a href="#">Panopto Video</a></li>
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Announcements</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Files</a></li>
+                            <li><a href="#">Rubrics</a></li>
+                            <li><a href="#">Outcomes</a></li>
+                            <li><a href="#">Collaborations</a></li>
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </nav>
+                    <!-- Other main content -->
+                    <div class="col-9">
+                        <div class="wd-courses-assignments-editor">
 
-        <input type="radio" id="trio" name="group_size" value="trio">
-        <label for="trio">3 Students</label><br>
-        <br>
-        <label>Peer Reviews:</label><br>
-        <input type="radio" id="mandatory_review" name="peer_review_requirement" value="mandatory">
-        <label for="mandatory_review">Mandatory</label><br>
+                            <div class="row justify-content-end align-items-center submission-section">
+                                <div class="col-2 wd-color-green">
+                                    <i class="fa fa-check-circle"></i> Published
+                                </div>
+                                <div class=" justify-content-end col-1">
+                                    <button class="assignments-btn"><i class="fa fa-ellipsis-v"></i></button>
+                                </div>
+                            </div>
 
-        <input type="radio" id="optional_review" name="peer_review_requirement" value="optional">
-        <label for="optional_review">Optional</label><br>
-        <br>
-        Assign<br>
-        Assign to<br>
-        <label>
-            <input type="text" value="Everyone"/>
-        </label><br>
-        <br>
-        Due<br />
-        <input name="wd-due-date" type="date" value="2021-01-01" /><br>
-        <br>
-        Available From<br>
-        <input name="wd-available-from" type="date" value="2021-01-01" /><br>
-        <br>
-        Until<br>
-        <input name="wd-available-until" type="date" value="2021-01-01" /><br>
-        <br>
-        <table>
-            <tr>
-                <td>
-                    <form action="../screen.html">
-                        <button type="submit">Save</button>
-                    </form>
-                </td>
-                <td>
-                    <form action="../screen.html">
-                        <button type="submit">Cancel</button>
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </td>
-</table>
+                            <div class="container ms-2">
+                                <div class="row mb-2">
+                                    <div class="col-md-4">
+                                        <label for="wd-assignment-name" class="form-label">Assignment Name</label>
+                                        <input type="text" id="wd-assignment-name" class="form-control" value="A1 ENV + HTML">
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-8">
+                                        <label for="wd-assignment-description" class="form-label">Description</label>
+                                        <textarea id="wd-assignment-description" class="form-control">This is the assignment description.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-container">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="points">Points</label>
+                                        <input type="number" id="points" name="points" value="100">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="assignmentGroup">Assignment Group</label>
+                                        <select id="assignmentGroup" name="assignmentGroup">
+                                            <option value="assignments">ASSIGNMENTS</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="displayGrade">Display Grade as</label>
+                                        <select id="displayGrade" name="displayGrade">
+                                            <option value="percentage">Percentage</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                <span class="wd-right-line">
+                    <input type="checkbox" id="finalGrade" name="finalGrade">
+                    <label for="finalGrade" class="right-line">Do not count this assignment towards the final grade</label>
+                </span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Assign to</label>
+                                        <input type="text" placeholder="Everyone">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="dueDate">Due</label>
+                                        <input type="datetime-local" id="dueDate" name="dueDate">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="availableFrom">Available from</label>
+                                        <input type="datetime-local" id="availableFrom" name="availableFrom">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="availableUntil">Until</label>
+                                        <input type="datetime-local" id="availableUntil" name="availableUntil">
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <button type="submit">Add</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="row align-items-center submission-section">
+                                <div class="col-7">
+                                    <div class="ms-2 form-check">
+                                        <input class="form-check-input p-l" type="checkbox" value="" id="notifyChange">
+                                        <label class="form-check-label" for="notifyChange">
+                                            Notify users that this content has changed
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-5 ">
+                                    <div class="assignments-btn d-flex justify-content-end mt-3 ">
+                                        <form action="../screen.html"><button type="submit" class="btn btn-success me-2 ">Cancel</button></form>
+                                        <form action="../screen.html"><button type="submit" class="btn btn-success assignments">Save</button></form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

@@ -3,175 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignments Column</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../../libs/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../../libs/bootstrap/bootstrap.min.css" />
 </head>
 <body>
+<div class="wd-courses-assignments">
 
-<table>
-    <td><input placeholder="Search Assignment" /><br /></td>
-    <td><button>Group</button></td>
-    <td><button>Assignment</button></td>
-    <td><label for="edit-assignment-dates"></label>
-        <select id="edit-assignment-dates">
-            <option value="date1">Edit Assignment Dates</option>
-        </select></td>
-</table>
-<!--Assignments-->
-<table>
-    <td>
-        <h4>ASSIGNMENTS 40% of Total</h4>
-    </td>
-    <td>
-        <label>
-            <select>
-                <option>Edit</option>
-                <option>Speed Grader</option>
-                <option>Duplicate</option>
-                <option>Delete</option>
-                <option>Move To...</option>
-                <option>Send To...</option>
-                <option>Copy To...</option>
-                <option>Share to Commons</option>
-            </select>
-        </label>
-    </td>
-</table>
-<ul>
-    <li>
-        <a href="#">A1 ENV + HTML</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-    <li>
-        <a href="#">A2 CSS + BOOTSTRAP</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-    <li>
-        <a href="#">A3 JS + REACT</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-    <li>
-        <a href="#">A4 STATE + REDUX</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-    <li>
-        <a href="#">A5 NODE + SESSION</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-    <li>
-        <a href="#">A6 MANGO + MONGOOSE</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-</ul>
-<!--Quizzes-->
-<table>
-    <td>
-        <h4>QUIZZES 10% of Total</h4>
-    </td>
-    <td>
-        <label>
-            <select>
-                <option>Edit</option>
-                <option>Speed Grader</option>
-                <option>Duplicate</option>
-                <option>Delete</option>
-                <option>Move To...</option>
-                <option>Send To...</option>
-                <option>Copy To...</option>
-                <option>Share to Commons</option>
-            </select>
-        </label>
-    </td>
-</table>
-<ul>
-    <li>
-        <a href="#">Q1 - HTML</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-    <li>
-        <a href="#">Q2 - CSS</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-    <li>
-        <a href="#">Q3 - JS, ES6</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-    <li>
-        <a href="#">Q4 - NODE</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-    <li>
-        <a href="#">Q5 - MANGO</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-</ul>
-<!--Exams-->
-<table>
-    <td>
-        <h4>Exams 20% of Total</h4>
-    </td>
-    <td>
-        <label>
-            <select>
-                <option>Edit</option>
-                <option>Speed Grader</option>
-                <option>Duplicate</option>
-                <option>Delete</option>
-                <option>Move To...</option>
-                <option>Send To...</option>
-                <option>Copy To...</option>
-                <option>Share to Commons</option>
-            </select>
-        </label>
-    </td>
-</table>
-<ul>
-    <li>
-        <a href="#">Midterm</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-    <li>
-        <a href="#">Final</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-</ul>
-<!--Project-->
-<table>
-    <td>
-        <h4>PROJECT 30% of Total</h4>
-    </td>
-    <td>
-        <label>
-            <select>
-                <option>Edit</option>
-                <option>Speed Grader</option>
-                <option>Duplicate</option>
-                <option>Delete</option>
-                <option>Move To...</option>
-                <option>Send To...</option>
-                <option>Copy To...</option>
-                <option>Share to Commons</option>
-            </select>
-        </label>
-    </td>
-</table>
-<ul>
-    <li>
-        <a href="#">Project</a>
-        <br>
-        <a href="#">Multiple Modules</a> | Not available yet
-    </li>
-</ul>
+    <div class="container top-search-sec">
+        <div class="row">
+            <div class="col-3 d-flex justify-content-start">
+                <div>
+                    <label>
+                        <input type="text" class="form-control" placeholder="Search for Assignment">
+                    </label>
+                </div>
+            </div>
+            <div class="col-9 d-flex assignments-btn justify-content-end">
+                <button class="btn btn-primary me-2"><i class="fa fa-plus"></i> Group</button>
+                <button class="btn btn-primary me-2 assignments"><i class="fa fa-plus"></i> Assignment</button>
+                <button class="btn btn-primary me-2"><i class="fa fa-ellipsis-v"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container top-search-sec wd-sections">
+
+        <!-- Assignments Section -->
+        <div class="mb-4 wd-section">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="section-title">Assignments</h4>
+                <span class="float-end"><input type="text" class="rounded" placeholder="40% of Total"><i class="fa fa-plus text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+            </div>
+            <ul class="list-group">
+                <!-- List Items -->
+                <li class="list-group-item "><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">A1 ENV</h4>A1 ENV + HTML - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">A2 CSS</h4>A2 CSS + BOOTSTRAP - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">A3 JS</h4>A3 JS + REACT - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">A4 STATE</h4>A4 STATE + REDUX - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+
+                    <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">A5 NODE</h4>A5 NODE + SESSION - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+
+                    <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">A6 MANGO</h4>A6 MANGO + MONGOOSE - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+            </ul>
+        </div>
+
+        <!-- Quizzes Section -->
+        <div class="mb-4 wd-section">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="section-title">Quizzes</h4>
+                <span class="float-end"><input type="text" class="rounded" placeholder="10% of Total"><i class="fa fa-plus text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">Q1 ENV</h4>Q1 - HTML - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">Q2 CSS</h4>Q2 - CSS - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">Q3 JS</h4>Q3 - JS, ES6 - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">Q4 NODE</h4>Q4 - NODE - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">Q5 MANGO</h4>Q5 - MANGO - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+            </ul>
+        </div>
+
+        <!-- Exams Section -->
+        <div class="mb-4 wd-section">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="section-title">Exams</h4>
+                <span class="float-end"><input type="text" class="rounded" placeholder="20% of Total"><i class="fa fa-plus text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">MIDTERM</h4>Midterm - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">FINAL</h4>Final - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+            </ul>
+        </div>
+
+        <!-- Project Section -->
+        <div class="mb-4 wd-section">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="section-title">Project</h4>
+                <span class="float-end"><input type="text" class="rounded" placeholder="30% of Total"><i class="fa fa-plus text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item"><div class="d-flex align-items-center">
+                    <i class="fa fa-ellipsis-v  me-2"></i><i class="fa fa-pencil-square-o me-2"></i><div class="flex-grow-1">
+                    <h4 class="li-title">PROJECT</h4>Project - Multiple Modules | Not available yet</div>
+                    <span class="float-end"><i class="fa fa-check-circle text-success"></i> <i class="fa fa-ellipsis-v ms-2"></i></span>
+                </div></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
 </body>
 </html>

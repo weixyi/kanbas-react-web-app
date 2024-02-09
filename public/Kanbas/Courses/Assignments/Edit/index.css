@@ -1,0 +1,84 @@
+.wd-courses-assignments-editor .assignments-btn .btn {
+    background-color: lightgray;
+    border-color: gray;
+    color: #1a1d20;
+}
+
+.wd-courses-assignments-editor .assignments-btn .assignments {
+    color: white;
+    background-color: #c13232;
+}
+
+.wd-courses-assignments-editor .wd-color-green {
+    color: #3f8f8a;
+}
+
+.wd-courses-assignments-editor .submission-section {
+    width: 100%;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid #ababab;
+    border-bottom: 1px solid #ababab;
+}
+
+.wd-courses-assignments-editor .form-container {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.wd-courses-assignments-editor .form-group {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.wd-courses-assignments-editor .form-group label {
+    flex: 0 0 120px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.wd-courses-assignments-editor .form-group input, .form-group select{
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.wd-courses-assignments-editor .wd-right-line{
+    margin-left: 125px;
+    padding: 5px;
+    flex: 1;
+}
+
+
+.wd-courses-assignments-editor .form-group input[type="checkbox"] {
+    flex: 0 0 auto;
+    margin-right: 5px;
+}
+
+.wd-courses-assignments-editor .form-group button {
+    padding: 10px 5px;
+    background-color: #b4c0cb;
+    color: #4c555e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    left: 0; /* Aligns the button to the right */
+    right:0;
+    margin: 0;
+}
+
+.wd-courses-assignments-editor{
+    margin-left: 20px;
+}
+
+
+.wd-courses-assignments-editor .form-group .checkbox-label {
+    display: flex;
+    align-items: center;
+}

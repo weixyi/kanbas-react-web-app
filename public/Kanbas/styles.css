@@ -26,14 +26,37 @@ body * {
 }
 
 .courses-sidebar {
-    position: sticky;
-    top: 40px;
+    position: fixed;
+    top: 60px;
     width: 180px; /* Sidebar width */
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
+    margin-right: 45px;
     overflow-x: hidden;
     overflow-y: auto;
     flex-grow: 1;
-    margin:0;
-    height:calc(100% - 40px);
+    height:calc(100% - 60px);
+}
+
+.courses-sidebar.scrolled {
+    top: 0; /* Stick to the top of the viewport */
+    height: 100vh;
+}
+
+.breadcrumb{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #71787e;
+}
+
+.breadcrumb-item{
+    margin-left: 15px;
+    color: darkred;
+    font-size: larger;
+}
+
+.breadcrumb-item .active{
+    color: #2d3740;
 }
