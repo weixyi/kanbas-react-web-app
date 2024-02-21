@@ -24,41 +24,28 @@ body * {
     overflow-x: hidden;
     overflow-y: auto;
     flex-grow: 1;
+    height: 100%;
 }
 
 .courses-sidebar {
     position: fixed;
     top: 60px;
-    width: 200px;
-    min-width: 200px;
+    width: 180px; /* Sidebar width */
     padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 25px;
+    padding-right: 20px;
+    margin-right: 45px;
     overflow-x: hidden;
     overflow-y: auto;
     flex-grow: 1;
     height:calc(100% - 60px);
 }
 
+.main-content{
+    padding-left: 120px;
+}
+
+
 .courses-sidebar.scrolled {
     top: 0; /* Stick to the top of the viewport */
     height: 100vh;
-}
-
-.breadcrumb{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #71787e;
-}
-
-.breadcrumb-item{
-    margin-left: 15px;
-    color: darkred;
-    font-size: larger;
-}
-
-.breadcrumb-item .active{
-    color: #2d3740;
 }

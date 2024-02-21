@@ -1,0 +1,13 @@
+[ { "_id": "RS101", "name": "Rocket Propulsion", "number": "RS4550", "startDate": "2023-01-10",
+  "endDate": "2023-05-15", "image": "Animal1.jpg" },
+  { "_id": "RS102", "name": "Aerodynamics", "number": "RS4560", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "panda2.jpg" },
+  { "_id": "RS103", "name": "Spacecraft Design", "number": "RS4570", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "Panda1.jpg" },
+  { "_id": "RS1004", "name": "Web Development", "number": "RS4570", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "Animal4.jpg" },
+  { "_id": "RS1005", "name": "Machine Learning", "number": "RS4570", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "Panda1.jpg" },
+  { "_id": "RS1006", "name": "Computer Graphics", "number": "RS4570", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "panda2.jpg" }
+]

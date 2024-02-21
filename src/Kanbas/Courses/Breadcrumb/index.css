@@ -1,0 +1,20 @@
+.wd-breadcrumb{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 0;
+    height: 60px;
+    border-bottom: 1px solid #4c555e;
+}
+
+.wd-breadcrumb-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: larger;
+    color: #2d3740;
+    display: flex;
+    align-items: center;
+}
+
+.wd-breadcrumb-item .active{
+    color: darkred;
+}

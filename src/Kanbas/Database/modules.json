@@ -1,0 +1,52 @@
+[
+  {
+    "week": "Week 0 - INTRO",
+    "categories": [
+      {
+        "title": "LEARNING",
+        "items": [
+          "Introduction to the course",
+          "Learn what is Web Development",
+          "Creating an environment",
+          "Creating a Web Application",
+          "Getting started with the 1st assignment"
+        ]
+      },
+      {
+        "title": "READING",
+        "items": [
+          "Full Stack Developer - Chapter 1 - Introduction",
+          "Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML"
+        ]
+      },
+      {
+        "title": "SLIDES",
+        "items": [
+          "Introduction to Web Development",
+          "Creating an HTTP server with Node.js",
+          "Creating a React Application"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "Week 1 - HTML",
+    "categories": [
+      {
+        "title": "LEARNING OBJECTIVES",
+        "items": [
+          "Learn how to create user interfaces with HTML",
+          "Keep working on assignment 1",
+          "Deploy the assignment to Netlify"
+        ]
+      },
+      {
+        "title": "READING",
+        "items": [
+          "Full Stack Developer - Chapter 1 - Introduction",
+          "Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML"
+        ]
+      }
+    ]
+  }
+]
