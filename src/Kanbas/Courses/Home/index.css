@@ -1,0 +1,10 @@
+.wd-courses-home-screen{
+    display: flex;
+    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+}
+
+.wd-courses-home-screen > :not(:last-child) {
+    padding-right: 20px;
+}
