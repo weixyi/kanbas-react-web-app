@@ -27,18 +27,6 @@ body * {
     height: 100%;
 }
 
-.courses-sidebar {
-    position: fixed;
-    top: 60px;
-    width: 180px; /* Sidebar width */
-    padding-left: 10px;
-    padding-right: 20px;
-    margin-right: 45px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    flex-grow: 1;
-    height:calc(100% - 60px);
-}
 
 .main-content{
     padding-left: 120px;

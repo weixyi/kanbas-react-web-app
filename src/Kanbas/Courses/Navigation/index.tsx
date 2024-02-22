@@ -1,34 +1,39 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import {Link, useLocation, useParams} from 'react-router-dom';
 import './index.css';
 
 function CoursesNavigation() {
-    const coursesLinks = [
-        { label: "Home", path: "/Kanbas/Courses/Home" },
-        { label: "Modules", path: "/Kanbas/Courses/Modules" },
-        { label: "Piazza", path: "/Kanbas/Courses/Piazza" },
-        { label: "Zoom Meetings", path: "/Kanbas/Courses/ZoomMeetings" },
-        { label: "Assignments", path: "/Kanbas/Courses/Assignments" },
-        { label: "Quizzes", path: "/Kanbas/Courses/Quizzes" },
-        { label: "Grades", path: "/Kanbas/Courses/Grades" },
-        { label: "People", path: "/Kanbas/Courses/People" },
-        { label: "Panopto Video", path: "/Kanbas/Courses/PanoptoVideo" },
-        { label: "Discussions", path: "/Kanbas/Courses/Discussions" },
-        { label: "Announcements", path: "/Kanbas/Courses/Announcements" },
-        { label: "Pages", path: "/Kanbas/Courses/Pages" },
-        { label: "Files", path: "/Kanbas/Courses/Files" },
-        { label: "Rubrics", path: "/Kanbas/Courses/Rubrics" },
-        { label: "Outcomes", path: "/Kanbas/Courses/Outcomes" },
-        { label: "Collaborations", path: "/Kanbas/Courses/Collaborations" },
-        { label: "Syllabus", path: "/Kanbas/Courses/Syllabus" },
-        { label: "Settings", path: "/Kanbas/Courses/Settings" },
-    ];
-    const { pathname } = useLocation();
 
+    const { pathname } = useLocation();
+    const { courseId } = useParams();
+    const basePath = courseId ? `/Kanbas/Courses/${courseId}` : '/Kanbas/Courses';
+    const coursesLinks = [
+        { label: "Home", path: "${basePath}/Home" },
+        { label: "Modules", path: "${basePath}/Modules" },
+        { label: "Piazza", path: "${basePath}/Piazza" },
+        { label: "Zoom Meetings", path: "${basePath}/ZoomMeetings" },
+        { label: "Assignments", path: "${basePath}/Assignments" },
+        { label: "Quizzes", path: "${basePath}/Quizzes" },
+        { label: "Grades", path: "${basePath}/Grades" },
+        { label: "People", path: "${basePath}/People" },
+        { label: "Panopto Video", path: "${basePath}/PanoptoVideo" },
+        { label: "Discussions", path: "${basePath}/Discussions" },
+        { label: "Announcements", path: "${basePath}/Announcements" },
+        { label: "Pages", path: "${basePath}/Pages" },
+        { label: "Files", path: "${basePath}/Files" },
+        { label: "Rubrics", path: "${basePath}/Rubrics" },
+        { label: "Outcomes", path: "${basePath}/Outcomes" },
+        { label: "Collaborations", path: "${basePath}/Collaborations" },
+        { label: "Syllabus", path: "${basePath}/Syllabus" },
+        { label: "Settings", path: "${basePath}/Settings" },
+    ];
+    // determine if 'Home' should be active by default
+    const isHomeActive = pathname === basePath || pathname.includes(`${basePath}/Home`);
     return (
         <ul className="wd-courses-navigation courses-sidebar">
             {coursesLinks.map((course, index) => (
-                <li key={index} className={pathname.includes(course.path) ? "wd-active" : ""}>
+                <li key={index}
+                    className={(isHomeActive && course.label === "Home") || pathname.includes(course.path) ? "wd-active" : ""}>
                     <Link to={course.path}>{course.label}</Link>
                 </li>
             ))}

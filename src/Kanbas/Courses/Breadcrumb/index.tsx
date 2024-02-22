@@ -24,9 +24,7 @@ const Breadcrumb: React.FC = () => {
     }, [isVisible]);
 
     const location = useLocation();
-
     const pathSegments = location.pathname.split('/');
-
     const courseIndex = pathSegments.indexOf('Courses');
     const courseId = courseIndex !== -1 && pathSegments.length > courseIndex + 1 ? pathSegments[courseIndex + 1] : null;
     const course = courses.find((course) => course._id === courseId);
