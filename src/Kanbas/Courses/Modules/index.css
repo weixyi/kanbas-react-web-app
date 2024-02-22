@@ -25,7 +25,7 @@
     align-items: center;
 }
 
-.wd-courses-home-modules .wd-modules > li > i {
+.wd-courses-home-modules .wd-modules > li  > div> i {
     padding-left: 6px;
     padding-right: 10px;
     /*border-left: 1px solid gray;*/
@@ -33,7 +33,7 @@
 
 
 
-.wd-courses-home-modules .wd-modules > li > ul > li {
+.wd-courses-home-modules .wd-modules > li > div > ul > li {
     padding: 5px;
     background: white;
     border-top: 1px solid gray;
@@ -56,16 +56,29 @@
     padding-left: 10px;
 }
 
-.wd-courses-home-modules .wd-modules > li > ul {
+.wd-courses-home-modules .wd-modules > li > div > ul {
     padding-left: 5px;
     padding-bottom: 5px;
 }
 
-.wd-courses-home-modules .wd-modules > li > ul > li > ul {
+.wd-courses-home-modules .wd-modules > li > div > ul > li > ul {
     padding-left: 25px;
 }
 
-.wd-courses-home-modules .wd-modules > li > ul > li > ul > li > ul {
+.wd-courses-home-modules .wd-modules > li > div > ul > li > ul > li > ul {
     padding-left: 45px;
     padding-bottom: 10px;
+}
+
+.wd-courses-home-modules .wd-red-button{
+    color: white;
+    background-color: #c13232;
+}
+
+.wd-courses-home-modules button{
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
 }

@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from "react";
 import "./index.css";
 import {courses, modules} from "../../Database";
-import {FaEllipsisV, FaCheckCircle, FaPlusCircle} from "react-icons/fa";
+import {FaEllipsisV, FaCheckCircle, FaPlusCircle, FaArrowRight} from "react-icons/fa";
 import {useParams} from "react-router";
 import {stringify} from "node:querystring";
+
 
 function ModuleList() {
     const {courseId} = useParams();
@@ -13,6 +14,19 @@ function ModuleList() {
         setSelectedModule(modulesList[0]);
     }, [courseId]);
     const selectedModules = selectedModule?.modules || [];
+
+    const [expandedWeeks, setExpandedWeeks] = useState(new Set());
+    const toggleWeek = (week: string) => {
+        setExpandedWeeks((prevExpandedWeeks) => {
+            const newExpandedWeeks = new Set(prevExpandedWeeks);
+            if (newExpandedWeeks.has(week)) {
+                newExpandedWeeks.delete(week);
+            } else {
+                newExpandedWeeks.add(week);
+            }
+            return newExpandedWeeks;
+        });
+    };
 
     return (
         <div className={"wd-courses-home-modules"}>
@@ -25,40 +39,46 @@ function ModuleList() {
                     <option>Unpublish All</option>
                 </select>
             </label>
-            <button>Module</button>
+            <button className={"wd-red-button"}>Module</button>
             <hr/>
+
             <ul className="list-group wd-modules">
                 {selectedModules.map(({week, categories}, index) => (
                     <li key={index} className="list-group-item">
-                        <i className="fa fa-ellipsis-v"></i>
-                        {week}
-                        <span className="float-end">
+                        <div onClick={() => toggleWeek(week)}>
+                            <FaEllipsisV/>
+                            {week}
+                            <span className="float-end">
                           <FaCheckCircle className="text-success"/>
                           <FaPlusCircle className="ms-2"/>
                           <FaEllipsisV className="ms-2"/>
                         </span>
-                        <ul className="list-group">
-                            {categories.map(({title, items}, categoryIndex) => (
-                                <li key={categoryIndex} className="list-group-item">
-                                    {title}
-                                    <ul className="list-group">
-                                        {items.map((item, itemIndex) => (
-                                            <li key={itemIndex} className="list-group-item">
-                                                {item}
-                                                <span className="float-end">
-                          <FaCheckCircle className="text-success"/>
-                          <FaEllipsisV className="ms-2"/>
-                        </span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </li>
-                            ))}
-                        </ul>
-
+                            {expandedWeeks.has(week) && (
+                                <ul className="list-group">
+                                    {categories.map(({title, items}, categoryIndex) => (
+                                        <li key={categoryIndex} className="list-group-item">
+                                            {title}
+                                            <ul className="list-group">
+                                                {items.map((item, itemIndex) => (
+                                                    <li key={itemIndex} className="list-group-item">
+                                                        {item}
+                                                        <span className="float-end">
+                                                      <FaCheckCircle className="text-success"/>
+                                                      <FaEllipsisV className="ms-2"/>
+                                                    </span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </div>
                     </li>
                 ))}
             </ul>
+
+
         </div>
     );
 }
