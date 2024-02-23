@@ -11,14 +11,14 @@
 }
 
 .wd-breadcrumb-item{
-    margin-top: 10px;
-    margin-bottom: 10px;
     font-size: larger;
     color: #2d3740;
-    display: flex;
     align-items: center;
+    border: none;
 }
 
 .wd-breadcrumb-item .active{
     color: darkred;
+    margin: 10px 10px;
+    border: none;
 }

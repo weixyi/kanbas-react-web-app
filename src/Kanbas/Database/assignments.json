@@ -1,0 +1,27 @@
+[
+  { "_id": "A101", "title": "Propulsion Assignment", "course": "CS101" },
+  { "_id": "A102", "title": "Combustion Analysis", "course": "CS101" },
+  { "_id": "A103", "title": "Nozzle Design Project", "course": "CS101" },
+
+  { "_id": "A201", "title": "Aerodynamics Quiz", "course": "CS102" },
+  { "_id": "A202", "title": "Flow Analysis", "course": "CS102" },
+  { "_id": "A203", "title": "Heating Analysis", "course": "CS102" },
+
+  { "_id": "A301", "title": "Structural Design Task", "course": "CS103" },
+  { "_id": "A302", "title": "Orbital Calculations", "course": "CS103" },
+  { "_id": "A303", "title": "Systems Engineering Exam", "course": "CS103" },
+
+  { "_id": "A401", "title": "Structural Design Task", "course": "CS104" },
+  { "_id": "A402", "title": "Orbital Calculations", "course": "CS104" },
+  { "_id": "A403", "title": "Systems Engineering Exam", "course": "CS104" },
+
+  { "_id": "A501", "title": "Introduction to Algorithms", "course": "CS105" },
+  { "_id": "A502", "title": "Data Structures Project", "course": "CS105" },
+  { "_id": "A503", "title": "Complexity Analysis Homework", "course": "CS105" },
+  { "_id": "A504", "title": "Sorting Algorithms Quiz", "course": "CS105" },
+
+  { "_id": "A601", "title": "Machine Learning Basics", "course": "CS106" },
+  { "_id": "A602", "title": "Neural Networks Assignment", "course": "CS106" },
+  { "_id": "A603", "title": "Deep Learning Project", "course": "CS106" },
+  { "_id": "A604", "title": "Natural Language Processing Task", "course": "CS106" }
+]

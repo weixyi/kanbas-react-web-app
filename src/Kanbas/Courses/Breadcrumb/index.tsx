@@ -29,12 +29,20 @@ const Breadcrumb: React.FC = () => {
     const courseId = courseIndex !== -1 && pathSegments.length > courseIndex + 1 ? pathSegments[courseIndex + 1] : null;
     const course = courses.find((course) => course._id === courseId);
     const courseTitle = course? course.name: "Course Name not found";
+    const screenName = pathSegments.length > courseIndex + 2 ? pathSegments[courseIndex + 2] : null;
 
     return (
         isVisible && (
             <nav className={`wd-breadcrumb ${isVisible ? '' : 'd-none'}`}>
                 <div>
-                    <h3>{courseId} {'>'} {courseTitle}</h3>
+                    <span className={"wd-breadcrumb-item"}>
+                        {courseId && courseTitle && (
+                            <Link className={"wd-breadcrumb active"} to={`/Courses/${courseId}`}>
+                                {courseId} {courseTitle}
+                            </Link>
+                        )}
+                        {` ${screenName}`}
+                    </span>
                 </div>
             </nav>
         )
