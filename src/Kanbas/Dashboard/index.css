@@ -1,0 +1,12 @@
+.wd-kanbas-dashboard .course-card {
+    padding: 10px;
+}
+
+.wd-kanbas-dashboard .course-img {
+    height: 150px;
+    object-fit: cover; /* Maintain aspect ratio */
+    width: 100%;
+}
+
+.wd-kanbas-dashboard{
+}

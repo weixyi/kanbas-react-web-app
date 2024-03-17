@@ -1,0 +1,56 @@
+.wd-kanbas-dashboard .course-card {
+    width: 250px;
+    margin: 15px
+}
+.wd-kanbas-dashboard .course-img {
+    height: 150px;
+    object-fit: cover; /* Maintain aspect ratio */
+    width: 100%;
+}
+.wd-kanbas-dashboard .active-link {
+    background-color: white;
+    color: red;
+}
+
+.wd-kanbas-dashboard body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.wd-kanbas-dashboard .main-content {
+    margin-left: 120px;
+    margin-right: 10px;
+}
+
+.wd-kanbas-dashboard div.col{
+    max-width: 290px;
+}
+
+
+.wd-kanbas-dashboard .gx-4 {
+    --bs-gutter-x: 40px;
+}
+
+.wd-kanbas-dashboard .gy-4 {
+    --bs-gutter-y: 40px;
+}
+
+
+.wd-kanbas-dashboard @media (max-width: 500px) {
+    .sidebar {
+        display: none; /* Hide sidebar on small screens */
+        width:0;
+    }
+    .main-content {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+    }
+    /* Ensure columns take full width on small screens */
+    .row-cols-1 {
+        column-count: 1;
+    }
+}
+

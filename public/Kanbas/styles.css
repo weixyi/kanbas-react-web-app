@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.no-padding {
+    margin:0;
+    padding-left: 0 !important;
+    max-width: 90px !important;
+    height:100%;
+}
+
+.sidebar {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 0;
+    left: 0;
+    right:0;
+    width: 90px; /* Sidebar width */
+    padding-left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.courses-sidebar {
+    position: fixed;
+    top: 60px;
+    width: 200px;
+    min-width: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 25px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-grow: 1;
+    height:calc(100% - 60px);
+}
+
+.courses-sidebar.scrolled {
+    top: 0; /* Stick to the top of the viewport */
+    height: 100vh;
+}
+
+.breadcrumb{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #71787e;
+}
+
+.breadcrumb-item{
+    margin-left: 15px;
+    color: darkred;
+    font-size: larger;
+}
+
+.breadcrumb-item .active{
+    color: #2d3740;
+}

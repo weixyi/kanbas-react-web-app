@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../../libs/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../../../libs/bootstrap/bootstrap.min.css" />
+</head>
+<body>
+<div class="wd-courses-assignments-editor">
+
+    <div class="row justify-content-end align-items-center submission-section">
+        <div class="col-2 wd-color-green">
+            <i class="fa fa-check-circle"></i> Published
+        </div>
+        <div class=" justify-content-end col-1">
+            <button class="assignments-btn"><i class="fa fa-ellipsis-v"></i></button>
+        </div>
+    </div>
+
+    <div class="container ms-2">
+        <div class="row mb-2">
+            <div class="col-md-4">
+                <label for="wd-assignment-name" class="form-label">Assignment Name</label>
+                <input type="text" id="wd-assignment-name" class="form-control" value="A1 ENV + HTML">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <label for="wd-assignment-description" class="form-label">Description</label>
+                <textarea id="wd-assignment-description" class="form-control">This is the assignment description.</textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="points">Points</label>
+                <input type="number" id="points" name="points" value="100">
+            </div>
+
+            <div class="form-group">
+                <label for="assignmentGroup">Assignment Group</label>
+                <select id="assignmentGroup" name="assignmentGroup">
+                    <option value="assignments">ASSIGNMENTS</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="displayGrade">Display Grade as</label>
+                <select id="displayGrade" name="displayGrade">
+                    <option value="percentage">Percentage</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <span class="wd-right-line">
+                    <input type="checkbox" id="finalGrade" name="finalGrade">
+                    <label for="finalGrade" class="right-line">Do not count this assignment towards the final grade</label>
+                </span>
+            </div>
+
+            <div class="form-group">
+                <label>Assign to</label>
+                <input type="text" placeholder="Everyone">
+            </div>
+
+            <div class="form-group">
+                <label for="dueDate">Due</label>
+                <input type="datetime-local" id="dueDate" name="dueDate">
+            </div>
+
+            <div class="form-group">
+                <label for="availableFrom">Available from</label>
+                <input type="datetime-local" id="availableFrom" name="availableFrom">
+            </div>
+
+            <div class="form-group">
+                <label for="availableUntil">Until</label>
+                <input type="datetime-local" id="availableUntil" name="availableUntil">
+            </div>
+
+
+            <div class="form-group">
+                <button type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row align-items-center submission-section">
+        <div class="col-7">
+            <div class="ms-2 form-check">
+                <input class="form-check-input p-l" type="checkbox" value="" id="notifyChange">
+                <label class="form-check-label" for="notifyChange">
+                    Notify users that this content has changed
+                </label>
+            </div>
+        </div>
+        <div class="col-5 ">
+            <div class="assignments-btn d-flex justify-content-end mt-3 ">
+                <form action="../screen.html"><button type="submit" class="btn btn-success me-2 ">Cancel</button></form>
+                <form action="../screen.html"><button type="button" class="btn btn-secondary assignments">Save</button></form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<html lang="">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../../libs/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../../libs/bootstrap/bootstrap.min.css" />
+</head>
+<body>
+
+<div class="wd-courses-grades">
+
+    <div class="d-flex grades-btn-set justify-content-end">
+        <button class="btn btn-outline-secondary mr-2">
+            <i class="fa fa-upload"></i> Import
+        </button>
+        <div class="btn-group mr-2">
+            <button class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-download"></i> Export
+            </button>
+            <div class="dropdown-menu">
+            </div>
+        </div>
+        <button class="btn btn-outline-secondary">
+            <i class="fa fa-cog"></i>
+        </button>
+    </div>
+
+    <div class="container wd-align-left">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="searchStudents"><h3>Student Names</h3></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="searchStudents" placeholder="Search Students">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="searchAssignments"><h3>Assignment Names</h3></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="searchAssignments" placeholder="Search Assignments">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grades-btn-set justify-content-end">
+        <button class="btn btn-outline-secondary mr-2">
+            <i class="fa fa-filter"></i> Apply Filters
+        </button>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th rowspan="2">Student Name</th>
+                <th>A1</th>
+                <th>A2</th>
+                <th>A3</th>
+                <th>A4</th>
+                <th>A5</th>
+                <th>A6</th>
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q3</th>
+            </tr>
+            <tr>
+                <th>Out of 100</th>
+                <th>Out of 100</th>
+                <th>Out of 100</th>
+                <th>Out of 100</th>
+                <th>Out of 100</th>
+                <th>Out of 100</th>
+                <th>Out of 100</th>
+                <th>Out of 100</th>
+                <th>Out of 100</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="student-name">Alice A</td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+            </tr>
+            <tr>
+                <td class="student-name">Bob B</td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+                <td>
+                    <input type="number" min="0" max="100" placeholder="Enter a number" title="Enter a number between 0 and 100" value="100" />
+                </td>
+            </tr>
+            <tr>
+                <td class="student-name">Charlie C</td>
+                <td>100</td>
+                <td><input value="100" type="number" max="100" min="0" /></td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td><input value="100" type="number" max="100" min="0" /></td>
+            </tr>
+            <tr>
+                <td class="student-name">Dylan D</td>
+                <td>100</td>
+                <td><input value="80" type="number" max="100" min="0" /></td>
+                <td>5</td>
+                <td>30</td>
+                <td>80</td>
+                <td><input value="90" type="number" max="100" min="0" /></td>
+                <td>10</td>
+                <td>100</td>
+                <td><input value="100" type="number" max="100" min="0" /></td>
+            </tr>
+            <tr>
+                <td class="student-name">Erika E</td>
+                <td>100</td>
+                <td>100</td>
+                <td><input value="99" type="number" max="100" min="0" /></td>
+                <td>99</td>
+                <td>100</td>
+                <td><input value="100" type="number" max="100" min="0" /></td>
+                <td>19</td>
+                <td>100</td>
+                <td><input value="100" type="number" max="100" min="0" /></td>
+            </tr>
+            <tr>
+                <td class="student-name">Francis F</td>
+                <td>100</td>
+                <td><input value="99" type="number" max="100" min="0" /></td>
+                <td>70</td>
+                <td>99</td>
+                <td>12</td>
+                <td>99</td>
+                <td>19</td>
+                <td><input value="99" type="number" max="100" min="0" /></td>
+                <td>87</td>
+            </tr>
+            <tr>
+                <td class="student-name">Greta G</td>
+                <td>90</td>
+                <td>100</td>
+                <td><input value="89" type="number" max="100" min="0" /></td>
+                <td>99</td>
+                <td>100</td>
+                <td>99</td>
+                <td>89</td>
+                <td>80</td>
+                <td><input value="100" type="number" max="100" min="0" /></td>
+            </tr>
+            <tr>
+                <td class="student-name">Haoran H</td>
+                <td>100</td>
+                <td>10</td>
+                <td>100</td>
+                <td><input value="100" type="number" max="100" min="0" /></td>
+                <td><input value="80" type="number" max="100" min="0" /></td>
+                <td>5</td>
+                <td>30</td>
+                <td>80</td>
+                <td><input value="90" type="number" max="100" min="0" /></td>
+            </tr>
+            <tr>
+                <td class="student-name">Ivan I</td>
+                <td>100</td>
+                <td>100</td>
+                <td><input value="99" type="number" max="100" min="0" /></td>
+                <td>99</td>
+                <td>100</td>
+                <td><input value="80" type="number" max="100" min="0" /></td>
+                <td>19</td>
+                <td>100</td>
+                <td><input value="100" type="number" max="100" min="0" /></td>
+            </tr>
+            <tr>
+                <td class="student-name">Jiaran J</td>
+                <td>100</td>
+                <td><input value="99" type="number" max="100" min="0" /></td>
+                <td>70</td>
+                <td><input value="99" type="number" max="100" min="0" /></td>
+                <td>12</td>
+                <td>99</td>
+                <td>19</td>
+                <td><input value="99" type="number" max="100" min="0" /></td>
+                <td>87</td>
+            </tr>
+            <tr>
+                <td class="student-name">Karol K</td>
+                <td>90</td>
+                <td>100</td>
+                <td><input value="99" type="number" max="100" min="0" /></td>
+                <td>99</td>
+                <td>100</td>
+                <td>99</td>
+                <td>89</td>
+                <td>80</td>
+                <td><input value="100" type="number" max="100" min="0" /></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

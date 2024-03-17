@@ -1,0 +1,65 @@
+.wd-courses-assignments .assignments-btn .btn {
+    background-color: lightgray;
+    border-color: gray;
+    color: #1a1d20;
+}
+
+.wd-courses-assignments .assignments-btn .assignments {
+    color: white;
+    background-color: #c13232;
+}
+
+.wd-courses-assignments .form-control {
+    width: auto; /* Adjust this value to match the width in the image */
+    margin-left: 0;
+}
+
+.wd-courses-assignments .top-search-sec {
+    margin-left: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: #71787e solid 1px;
+}
+
+.wd-courses-assignments .wd-sections{
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.wd-courses-assignments .wd-section{
+    background: #f3f3f3;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 5px solid #3c804e;
+}
+
+
+.wd-courses-assignments .section-title{
+    margin-top: 5px;
+    padding-top: 5px;
+    margin-left: 10px;
+    font-weight: 600;
+    color: #4c555e;
+    font-size: large;
+}
+
+.wd-courses-assignments .li-title{
+    margin-top: 5px;
+    font-weight: 600;
+    color: #4c555e;
+    font-size: large;
+}
+
+.wd-courses-assignments .li-title a{
+    color: #4c555e;
+}
+
+.wd-courses-assignments .fa-pencil-square-o{
+    color: mediumseagreen;
+}
+
+.wd-courses-assignments .fa{
+    margin-right: 10px;
+    padding-right: 10px;
+    margin-left: 5px;
+}
