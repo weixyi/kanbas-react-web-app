@@ -7,15 +7,20 @@ import Classes from "./a3/Classes";
 import Styles from "./a3/Styles";
 import ConditionalOutput from "./a3/ConditionalOutput";
 import Highlight from "./a3/Hightlight";
+import store from "./store"
+import {Provider} from "react-redux"
 function Labs() {
     return(
-        <div>
-            <Nav/>
-            <Routes>
-                <Route path="/a3/*" element={<Assignment3 />} />
-                <Route path="/a4/*" element={<Assignment4 />} />
-            </Routes>
-        </div>
+        <Provider store={store}>
+            <div>
+                <Nav/>
+                <Routes>
+                    <Route path="/a3/*" element={<Assignment3/>}/>
+                    <Route path="/a4/*" element={<Assignment4/>}/>
+                </Routes>
+            </div>
+        </Provider>
     )
 }
+
 export default Labs;
