@@ -11,7 +11,24 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 
-function Courses() {
+type Course = {
+    _id: string;
+    name: string;
+    number: string;
+    startDate: string;
+    endDate: string;
+    image: string;
+};
+
+interface CoursesProps {
+    courses: Course[];
+}
+
+function Courses(
+    {
+        courses
+    }: CoursesProps
+) {
     const { courseId } = useParams();
     const course = courses.find((course) => course._id === courseId);
     return (

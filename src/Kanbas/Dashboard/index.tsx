@@ -1,48 +1,39 @@
 import "./index.css"
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { db } from "../Database";
-function Dashboard() {
-    const [courses, setCourses] = useState(db.courses);
+
+type Course = {
+    _id: string;
+    name: string;
+    number: string;
+    startDate: string;
+    endDate: string;
+    image: string;
+};
+
+interface DashboardProps {
+    courses: Course[];
+    course: Course;
+    setCourses: (courses: Course[]) => void;
+    setCourse: (course: Course) => void;
+    addNewCourse: () => void;
+    deleteCourse: (courseId: string) => void;
+    updateCourse: (course: Course) => void;
+}
+
+function Dashboard(
+    {
+       courses,
+       course,
+       setCourse,
+       setCourses,
+       addNewCourse,
+       deleteCourse,
+       updateCourse,
+    }: DashboardProps)
+{
     let course_count = courses.length
-    const [course, setCourse] = useState({
-        _id: "0", name: "New Course", number: "New Number",
-        startDate: "2023-09-10", endDate: "2023-12-15",
-        image: "panda2.jpg"
-    });
-    const addNewCourse = () => {
-        const newCourse = { ...course,
-            _id: new Date().getTime().toString() };
-        setCourses([...courses, { ...course, ...newCourse }]);
-        course_count +=1 ;
-    };
 
-
-    const deleteCourse = (courseId: string) => {
-        setCourses(courses.filter((course) => course._id !== courseId));
-    };
-
-    const updateCourse = () => {
-        setCourses(
-            courses.map((c) => {
-                if (c._id === course._id) {
-                    return course;
-                } else {
-                    return c;
-                }
-            })
-        );
-    };
-
-
-    type Course = {
-        _id: string;
-        name: string;
-        number: string;
-        startDate: string;
-        endDate: string;
-        // ... other fields
-    };
 
     const handleCourseChange = (courseId: string, field: keyof Course, value: string) => {
         const updatedCourses = courses.map(course => {
@@ -128,7 +119,7 @@ function Dashboard() {
                                         }} className="btn btn-primary ">
                                             Edit
                                         </button>
-                                        <button onClick={updateCourse} className="btn btn-primary ">
+                                        <button onClick={() => updateCourse(course)} className="btn btn-primary ">
                                             Update
                                         </button>
                                         {/*<Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-primary">*/}
