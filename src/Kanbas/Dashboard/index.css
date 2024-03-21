@@ -10,3 +10,44 @@
 
 .wd-kanbas-dashboard{
 }
+
+.wd-kanbas-dashboard .card-text{
+    margin-left: 0;
+}
+
+.wd-kanbas-dashboard .card-title{
+    padding: 5px 5px 5px 5px;
+    margin-left: 0;
+}
+
+.wd-kanbas-dashboard .form-control {
+    margin: 5px; /* Adds space below the input */
+    padding: 5px;       /* Increases padding inside the input */
+    border-radius: 5px;  /* Rounds the corners of the input */
+    border: 1px solid #e5e8f1; /* Sets the border color and width */
+}
+
+.wd-kanbas-dashboard .btn-primary {
+    margin-top: 10px;/* Increases padding inside the input */
+}
+
+.wd-kanbas-dashboard .btn-danger {
+    background-color: #cc7f7f;
+    border: indianred;
+}
+
+.wd-kanbas-dashboard{
+    .flex-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+
+    .flex-row label {
+        width: 150px;
+        margin-right: 10px;
+        color: #000080;
+        font-weight: bold;
+    }
+}

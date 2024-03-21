@@ -13,3 +13,15 @@ export {
     enrollments,
     grades,
 };
+
+const db = {
+    courses,
+    modules,
+    assignments,
+    grades,
+    enrollments,
+    users,
+};
+
+// Exporting the db object
+export { db };
