@@ -18,11 +18,8 @@
 .wd-courses-home-modules .wd-modules > li {
     background-color: lightgray;
     border: 1px solid gray;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 2px;
-    margin-bottom: 20px;
-    /*border-left: none;*/
+    padding: 10px 0 10px 2px;
+    margin: 10px 0 20px 0;
     align-items: center;
 }
 
@@ -32,6 +29,10 @@
     /*border-left: 1px solid gray;*/
 }
 
+.wd-week{
+    padding: 10px 0;
+    margin: 10px 0;
+}
 
 
 .wd-courses-home-modules .wd-modules > li > div > ul > li {
@@ -83,3 +84,124 @@
     border: 1px solid grey;
     border-radius: 5px;
 }
+
+.wd-courses-home-modules{
+    .add-modules .input-group {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        gap: 15px; /* Spacing between elements */
+
+    }
+
+    /* Use flex-grow to allow input and textarea to expand, but restrict the button's size */
+    .add-modules .input-group input,
+    .add-modules .input-group textarea {
+        flex-grow: 1; /* Allows input and textarea to grow */
+        margin: 0; /* Removes default margin */
+        height: 50px;
+    }
+
+    /* This ensures the button does not shrink and has fixed dimensions */
+    .add-modules .input-group button {
+        flex-shrink: 0; /* Prevent the button from shrinking */
+        height: 30px; /* Height of the button */
+        margin: 0 10px;
+        padding: 0 10px; /* Padding inside the button, adjust as necessary */
+        border-radius: 5px;
+    }
+
+    .add-modules{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+}
+
+.wd-edit-button {
+    margin: 5px; /* Adding margin around the button */
+    padding: 5px 10px;
+    border: 1px solid #1a1717; /* Border color */
+    color: #2f383f; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-size: medium;
+}
+
+/* Specifically target only the first button for left margin */
+.wd-edit-button:first-child {
+    margin-right: 10px;
+    margin-left: 0;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Specifically target only the last button for right margin */
+.wd-edit-button:last-child {
+    margin-left: 10px;
+    margin-right: 0;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.wd-edit-button:hover {
+    background-color: #71787e; /* Darker background on hover */
+}
+
+.module-edit-form {
+    background-color: #f8f9fa; /* Lighter gray to match the image background */
+    border: 1px solid #ccc; /* Light border as in the image */
+    padding: 15px;
+    margin-bottom: 20px; /* Add some space at the bottom of the form */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+.module-edit-form h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.25rem; /* Slightly larger than h4 for visibility */
+    color: #333; /* Dark font for visibility */
+}
+
+.module-edit-form input[type="text"],
+.module-edit-form ul {
+    border: 1px solid #ccc; /* Borders as in the image */
+    background-color: #fff; /* White background for inputs */
+    padding: 8px; /* Comfortable padding around text */
+    margin-bottom: 10px; /* Space between input fields */
+    width: 100%; /* Full width to align with the form width */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.module-edit-form ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Align with the rest of the form */
+}
+
+.module-edit-form ul li {
+    background-color: #fff; /* White background for list items */
+    border-bottom: 1px solid #eee; /* Light borders between items as in the image */
+    padding: 5px 8px; /* Consistent padding for items */
+}
+
+.module-edit-form .form-group {
+    margin-bottom: 10px; /* Space between form groups */
+}
+
+.module-edit-form .form-actions {
+    display: flex; /* Align buttons in a row */
+    justify-content: flex-end; /* Align buttons to the right */
+}
+
+.module-edit-form .btn-save,
+.module-edit-form .btn-cancel {
+    background-color: #4CAF50; /* Green background for save button */
+    border: none; /* No border for a cleaner look */
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px; /* Space between buttons */
+    cursor: pointer; /* Cursor for buttons */
+    font-weight: bold;
+    border-radius: 4px; /* Rounded corners for buttons */
+}
+
+
+
