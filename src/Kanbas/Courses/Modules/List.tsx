@@ -1,9 +1,18 @@
 import React, {useEffect, useState} from "react";
 import "./index.css";
-import {courses, modules} from "../../Database";
-import {FaEllipsisV, FaCheckCircle, FaPlusCircle, FaArrowRight} from "react-icons/fa";
+import {FaEllipsisV, FaCheckCircle} from "react-icons/fa";
 import {useParams} from "react-router";
-import {stringify} from "node:querystring";
+import { useSelector, useDispatch } from "react-redux";
+import {KanbasState} from "../../store";
+
+import {
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+    updateModules,
+} from "./modulesReducer";
+
 
 type ModuleType = {
     week: string;
@@ -22,28 +31,23 @@ type CategoryType = {
 function ModuleList() {
     const {courseId} = useParams();
 
-    const filteredModules = modules.filter((module) => module.course_id === courseId);
+    const moduleList = useSelector((state: KanbasState) =>
+        state.modulesReducer.modules);
+    const module = useSelector((state: KanbasState) =>
+        state.modulesReducer.module);
+    const dispatch = useDispatch();
 
-    const [moduleList, setModuleList] = useState(filteredModules);
     const [expandedWeeks, setExpandedWeeks] = useState(new Set());
-
-    useEffect(() => {
-        const filteredModules = modules.filter(module => module.course_id === courseId);
-
-        // Set the filtered modules to the moduleList state
-        setModuleList(filteredModules);
-        // Set the first module of the filtered list to the selectedModule state
-    }, [courseId]); // Dependency array includes courseId to re-run this effect when courseId changes
 
     const [isEditing, setIsEditing] = useState(false);
     const [editingModule, setEditingModule] = useState<ModuleType | null>(null); // Only set this state with non-null values
-    const [module, setModule] = useState({
-        description: "New Description",
-        course_id: courseId,
-        week: "New Module",
-        module_id: new Date().getTime().toString(),
-        "categories": []
-    });
+    // const [module, setModule] = useState({
+    //     description: "New Description",
+    //     course_id: courseId,
+    //     week: "New Module",
+    //     module_id: new Date().getTime().toString(),
+    //     "categories": []
+    // });
 
     const toggleWeek = (week: string)=> {
         setExpandedWeeks((prevExpandedWeeks) => {
@@ -57,26 +61,26 @@ function ModuleList() {
         });
     };
 
-    const addModule = (module: any) => {
-        const newModule = { ...module,
-            module_id: new Date().getTime().toString() };
-        setModuleList((prevModuleList) => [ ...prevModuleList, newModule]);
-        setModule(
-            {
-                description: "New Description",
-                    course_id: courseId,
-                week: "New Module",
-                module_id: new Date().getTime().toString(),
-                "categories": []
-            }
-        )
-    };
+    // const addModule = (module: any) => {
+    //     const newModule = { ...module,
+    //         module_id: new Date().getTime().toString() };
+    //     setModuleList((prevModuleList) => [ ...prevModuleList, newModule]);
+    //     setModule(
+    //         {
+    //             description: "New Description",
+    //                 course_id: courseId,
+    //             week: "New Module",
+    //             module_id: new Date().getTime().toString(),
+    //             "categories": []
+    //         }
+    //     )
+    // };
 
-    const deleteModule = (moduleId: string) => {
-        const newModuleList = moduleList.filter(
-            (module) => module.module_id !== moduleId );
-        setModuleList(newModuleList);
-    };
+    // const deleteModule = (moduleId: string) => {
+    //     const newModuleList = moduleList.filter(
+    //         (module) => module.module_id !== moduleId );
+    //     setModuleList(newModuleList);
+    // };
 
     const handleEditClick = (module:any) => {
         setIsEditing(true);
@@ -89,10 +93,10 @@ function ModuleList() {
     const saveEditedModule = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (editingModule) {
-            setModuleList(moduleList.map((mod) =>
-                    mod.module_id === editingModule.module_id ? editingModule : mod
-                )
-            );
+            // setModuleList(moduleList.map((mod) =>
+            //         mod.module_id === editingModule.module_id ? editingModule : mod
+            //     )
+            // );
             setIsEditing(false);
         }
     };
@@ -112,10 +116,12 @@ function ModuleList() {
             <hr/>
 
             <ul className="list-group wd-modules">
-                {moduleList.map(({week, module_id, categories, course_id}, index) => (
+                {moduleList.filter((module) => module.course_id === courseId).map(({week, module_id, categories, course_id}, index) => (
                     <li key={index} className="list-group-item">
                         <div className = {"wd-week"}>
-                            <span onClick={() => toggleWeek(week)}> <FaEllipsisV/></span>
+                            <button className={"wd-edit-button"} onClick={() => toggleWeek(week)} >
+                                <FaEllipsisV/>
+                            </button>
                             {week}
                             <span className="float-end">
                             <button className="wd-edit-button"
@@ -125,17 +131,17 @@ function ModuleList() {
                             Edit
                             </button>
                             <button className="wd-edit-button"
-                                onClick={() => deleteModule(module_id)}>
+                                onClick={() => dispatch(deleteModule(module_id))}>
                             Delete
                             </button>
                         </span>
                             {expandedWeeks.has(week) && (
                                 <ul className="list-group">
-                                    {categories.map(({title, items}, categoryIndex) => (
+                                    {categories.map(({title, items}:CategoryType, categoryIndex:number) => (
                                         <li key={categoryIndex} className="list-group-item">
                                             {title}
                                             <ul className="list-group">
-                                                {items.map((item, itemIndex) => (
+                                                {items.map((item, itemIndex:number) => (
                                                     <li key={itemIndex} className="list-group-item">
                                                         {item}
                                                         <span className="float-end">
@@ -158,14 +164,15 @@ function ModuleList() {
                 <div className="input-group">
                     <input
                         value={module.week}
-                        onChange={(e) => setModule({...module, week: e.target.value})}
+                        onChange={(e) => dispatch(setModule({...module, week: e.target.value}))}
                     />
                     <textarea
                         value={module.description}
-                        onChange={(e) => setModule({...module, description: e.target.value})}
+                        onChange={(e) => dispatch(setModule({...module, description: e.target.value}))}
                     />
                     <button className="wd-red-button" onClick={() => {
-                        addModule(module)
+                        dispatch(updateModule({...module, course_id: courseId}));
+                        dispatch(addModule(module));
                     }}>Add
                     </button>
                 </div>
