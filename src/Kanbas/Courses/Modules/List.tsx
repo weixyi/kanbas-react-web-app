@@ -31,23 +31,12 @@ type CategoryType = {
 function ModuleList() {
     const {courseId} = useParams();
 
-    const moduleList = useSelector((state: KanbasState) =>
-        state.modulesReducer.modules);
-    const module = useSelector((state: KanbasState) =>
-        state.modulesReducer.module);
+    const moduleList = useSelector((state: KanbasState) => state.modulesReducer.modules);
+    const module = useSelector((state: KanbasState) => state.modulesReducer.module);
     const dispatch = useDispatch();
-
     const [expandedWeeks, setExpandedWeeks] = useState(new Set());
-
     const [isEditing, setIsEditing] = useState(false);
     const [editingModule, setEditingModule] = useState<ModuleType | null>(null); // Only set this state with non-null values
-    // const [module, setModule] = useState({
-    //     description: "New Description",
-    //     course_id: courseId,
-    //     week: "New Module",
-    //     module_id: new Date().getTime().toString(),
-    //     "categories": []
-    // });
 
     const toggleWeek = (week: string)=> {
         setExpandedWeeks((prevExpandedWeeks) => {
@@ -61,27 +50,6 @@ function ModuleList() {
         });
     };
 
-    // const addModule = (module: any) => {
-    //     const newModule = { ...module,
-    //         module_id: new Date().getTime().toString() };
-    //     setModuleList((prevModuleList) => [ ...prevModuleList, newModule]);
-    //     setModule(
-    //         {
-    //             description: "New Description",
-    //                 course_id: courseId,
-    //             week: "New Module",
-    //             module_id: new Date().getTime().toString(),
-    //             "categories": []
-    //         }
-    //     )
-    // };
-
-    // const deleteModule = (moduleId: string) => {
-    //     const newModuleList = moduleList.filter(
-    //         (module) => module.module_id !== moduleId );
-    //     setModuleList(newModuleList);
-    // };
-
     const handleEditClick = (module:any) => {
         setIsEditing(true);
         setEditingModule({ ...module });
@@ -93,10 +61,9 @@ function ModuleList() {
     const saveEditedModule = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (editingModule) {
-            // setModuleList(moduleList.map((mod) =>
-            //         mod.module_id === editingModule.module_id ? editingModule : mod
-            //     )
-            // );
+            console.log(editingModule);
+            dispatch(updateModules( moduleList.map((mod) =>
+                    mod.module_id === editingModule.module_id ? editingModule : mod )));
             setIsEditing(false);
         }
     };

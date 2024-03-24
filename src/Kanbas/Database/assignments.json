@@ -1,27 +1,207 @@
 [
-  { "_id": "A101", "title": "Propulsion Assignment", "course": "CS101" },
-  { "_id": "A102", "title": "Combustion Analysis", "course": "CS101" },
-  { "_id": "A103", "title": "Nozzle Design Project", "course": "CS101" },
+  {
+    "_id": "A101",
+    "title": "Propulsion Assignment",
+    "course": "CS101",
+    "description": "Explore the principles of propulsion in aerospace engineering.",
+    "points": 100,
+    "dueDate": "2024-05-01",
+    "availableFromDate": "2024-04-01",
+    "availableUntilDate": "2024-05-01"
+  },
+  {
+    "_id": "A102",
+    "title": "Combustion Analysis",
+    "course": "CS101",
+    "description": "A detailed analysis of the combustion processes in jet engines.",
+    "points": 100,
+    "dueDate": "2024-06-01",
+    "availableFromDate": "2024-05-02",
+    "availableUntilDate": "2024-06-01"
+  },
+  {
+    "_id": "A103",
+    "title": "Nozzle Design Project",
+    "course": "CS101",
+    "description": "Design and simulate the performance of different nozzle shapes.",
+    "points": 100,
+    "dueDate": "2024-07-01",
+    "availableFromDate": "2024-06-02",
+    "availableUntilDate": "2024-07-01"
+  },
 
-  { "_id": "A201", "title": "Aerodynamics Quiz", "course": "CS102" },
-  { "_id": "A202", "title": "Flow Analysis", "course": "CS102" },
-  { "_id": "A203", "title": "Heating Analysis", "course": "CS102" },
+  {
+    "_id": "A201",
+    "title": "Aerodynamics Quiz",
+    "course": "CS102",
+    "description": "Quiz on basic aerodynamics principles.",
+    "points": 50,
+    "dueDate": "2024-04-15",
+    "availableFromDate": "2024-04-01",
+    "availableUntilDate": "2024-04-16"
+  },
+  {
+    "_id": "A202",
+    "title": "Flow Analysis",
+    "course": "CS102",
+    "description": "Perform a flow analysis using computational fluid dynamics software.",
+    "points": 70,
+    "dueDate": "2024-05-10",
+    "availableFromDate": "2024-04-20",
+    "availableUntilDate": "2024-05-11"
+  },
+  {
+    "_id": "A203",
+    "title": "Heating Analysis",
+    "course": "CS102",
+    "description": "Analyze the heat transfer in a given system.",
+    "points": 60,
+    "dueDate": "2024-06-05",
+    "availableFromDate": "2024-05-15",
+    "availableUntilDate": "2024-06-06"
+  },
 
-  { "_id": "A301", "title": "Structural Design Task", "course": "CS103" },
-  { "_id": "A302", "title": "Orbital Calculations", "course": "CS103" },
-  { "_id": "A303", "title": "Systems Engineering Exam", "course": "CS103" },
+  {
+    "_id": "A301",
+    "title": "Structural Design Task",
+    "course": "CS103",
+    "description": "Design a structural component following aerospace specifications.",
+    "points": 100,
+    "dueDate": "2024-08-01",
+    "availableFromDate": "2024-07-01",
+    "availableUntilDate": "2024-08-02"
+  },
+  {
+    "_id": "A302",
+    "title": "Orbital Calculations",
+    "course": "CS103",
+    "description": "Calculate the parameters for a stable orbit around Earth.",
+    "points": 100,
+    "dueDate": "2024-09-01",
+    "availableFromDate": "2024-08-01",
+    "availableUntilDate": "2024-09-02"
+  },
+  {
+    "_id": "A303",
+    "title": "Systems Engineering Exam",
+    "course": "CS103",
+    "description": "Comprehensive exam on systems engineering concepts.",
+    "points": 100,
+    "dueDate": "2024-10-01",
+    "availableFromDate": "2024-09-01",
+    "availableUntilDate": "2024-10-02"
+  },
 
-  { "_id": "A401", "title": "Structural Design Task", "course": "CS104" },
-  { "_id": "A402", "title": "Orbital Calculations", "course": "CS104" },
-  { "_id": "A403", "title": "Systems Engineering Exam", "course": "CS104" },
+  {
+    "_id": "A401",
+    "title": "Structural Design Task",
+    "course": "CS104",
+    "description": "Create a design proposal for a small pedestrian bridge.",
+    "points": 90,
+    "dueDate": "2024-08-15",
+    "availableFromDate": "2024-08-01",
+    "availableUntilDate": "2024-08-16"
+  },
+  {
+    "_id": "A402",
+    "title": "Orbital Calculations",
+    "course": "CS104",
+    "description": "Perform complex calculations to design a geostationary satellite's orbit.",
+    "points": 70,
+    "dueDate": "2024-09-05",
+    "availableFromDate": "2024-08-20",
+    "availableUntilDate": "2024-09-06"
+  },
+  {
+    "_id": "A403",
+    "title": "Systems Engineering Exam",
+    "course": "CS104",
+    "description": "A comprehensive exam on advanced systems engineering.",
+    "points": 100,
+    "dueDate": "2024-10-10",
+    "availableFromDate": "2024-09-25",
+    "availableUntilDate": "2024-10-11"
+  },
 
-  { "_id": "A501", "title": "Introduction to Algorithms", "course": "CS105" },
-  { "_id": "A502", "title": "Data Structures Project", "course": "CS105" },
-  { "_id": "A503", "title": "Complexity Analysis Homework", "course": "CS105" },
-  { "_id": "A504", "title": "Sorting Algorithms Quiz", "course": "CS105" },
+  {
+    "_id": "A501",
+    "title": "Introduction to Algorithms",
+    "course": "CS105",
+    "description": "A comprehensive overview of fundamental algorithms in computer science.",
+    "points": 50,
+    "dueDate": "2024-03-01",
+    "availableFromDate": "2024-02-15",
+    "availableUntilDate": "2024-03-02"
+  },
+  {
+    "_id": "A502",
+    "title": "Data Structures Project",
+    "course": "CS105",
+    "description": "Project focusing on implementing and analyzing various data structures.",
+    "points": 100,
+    "dueDate": "2024-04-15",
+    "availableFromDate": "2024-03-20",
+    "availableUntilDate": "2024-04-16"
+  },
+  {
+    "_id": "A503",
+    "title": "Complexity Analysis Homework",
+    "course": "CS105",
+    "description": "Homework assignment on analyzing the time and space complexity of algorithms.",
+    "points": 30,
+    "dueDate": "2024-05-05",
+    "availableFromDate": "2024-04-25",
+    "availableUntilDate": "2024-05-06"
+  },
+  {
+    "_id": "A504",
+    "title": "Sorting Algorithms Quiz",
+    "course": "CS105",
+    "description": "Quiz covering various sorting algorithms and their efficiency.",
+    "points": 40,
+    "dueDate": "2024-06-10",
+    "availableFromDate": "2024-05-30",
+    "availableUntilDate": "2024-06-11"
+  },
 
-  { "_id": "A601", "title": "Machine Learning Basics", "course": "CS106" },
-  { "_id": "A602", "title": "Neural Networks Assignment", "course": "CS106" },
-  { "_id": "A603", "title": "Deep Learning Project", "course": "CS106" },
-  { "_id": "A604", "title": "Natural Language Processing Task", "course": "CS106" }
+  {
+    "_id": "A601",
+    "title": "Machine Learning Basics",
+    "course": "CS106",
+    "description": "An introductory assignment on fundamental concepts of machine learning.",
+    "points": 50,
+    "dueDate": "2024-04-10",
+    "availableFromDate": "2024-03-25",
+    "availableUntilDate": "2024-04-11"
+  },
+  {
+    "_id": "A602",
+    "title": "Neural Networks Assignment",
+    "course": "CS106",
+    "description": "Explore the basics of neural networks through practical implementation.",
+    "points": 70,
+    "dueDate": "2024-05-20",
+    "availableFromDate": "2024-05-05",
+    "availableUntilDate": "2024-05-21"
+  },
+  {
+    "_id": "A603",
+    "title": "Deep Learning Project",
+    "course": "CS106",
+    "description": "Develop a deep learning project focusing on real-world applications.",
+    "points": 100,
+    "dueDate": "2024-07-15",
+    "availableFromDate": "2024-06-30",
+    "availableUntilDate": "2024-07-16"
+  },
+  {
+    "_id": "A604",
+    "title": "Natural Language Processing Task",
+    "course": "CS106",
+    "description": "Task to implement a small-scale natural language processing model.",
+    "points": 80,
+    "dueDate": "2024-08-05",
+    "availableFromDate": "2024-07-20",
+    "availableUntilDate": "2024-08-06"
+  }
 ]
